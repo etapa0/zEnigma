@@ -25,8 +25,57 @@ body{
 
 .int{
     width: 500px;
-    height: 450px;
+    height: auto;
     background-color: black;
     border: solid white 3px;
     padding: 5px;
+}
+
+.text{
+    margin-left: 48px;
+    margin-right: 55px;
+}
+
+@media screen and (max-width: 412px) {
+    body{
+        margin: 0;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: black;
+        color: white;
+    }
+
+    #b{
+        width: 150px;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:solid white 3px;    
+        color: white;
+        background-color: black;
+        font:normal 30px Arial;
+    }
+
+    #b:active{
+        background-color: rgba(78, 78, 78, 0.81);
+    }
+
+    .int{
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        border: solid white 3px;
+        padding: 8px;
+        font: normal 7px;
+    }
+
+    .text{
+        margin-left: 48px;
+        margin-right: 55px;
+    }
 }
