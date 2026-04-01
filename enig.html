@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução</title>
+    <link rel="stylesheet" href="enig.css">
+</head>
+<body>
+    ETAPA 0/20
+    <input type="button" value="clique" id="b" onclick="div()">
+    <div id="div"></div>
+    <spam></spam>
+    
+    <script>
+    let num = 0
+    const crel = document.createElement("div")    
+    
+    function div(){
+            if(num==0){
+                const div = document.getElementById('div');
+                crel.classList = "int"
+                crel.innerHTML = "• Este é um enigma de 20 etapas criado só pelo meme. <br>• Nada precisará ser instalado <br> • O primeiro(a) a decifrar as 20 etapas vai ganhar alguma coisa (talvez) <br> • Decifre sozinho ou com amigos <br> • Tudo pode ser usado para decifrar as etapas (livros, google e etc) <br> • Boa sorte"
+                div.appendChild(crel)
+                num++
+            }
+            else{
+                crel.remove()
+                num--
+            }    
+        }
+    console.log("essa é a etapa 0, não tem nada aqui")
+    </script>
+</body>
+</html>
