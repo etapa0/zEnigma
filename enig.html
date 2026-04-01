@@ -13,19 +13,28 @@
     <spam></spam>
     
     <script>
+    if (window.matchMedia("(max-width: 767px)").matches) {
+    alert("Este enigma é feito para computadores");
+    }
+    
     let num = 0
-    const crel = document.createElement("div")    
+    const crel = document.createElement("div")
+    const text = document.createElement("p")   
     
     function div(){
             if(num==0){
                 const div = document.getElementById('div');
                 crel.classList = "int"
-                crel.innerHTML = "• Este é um enigma de 20 etapas criado só pelo meme. <br>• Nada precisará ser instalado <br> • O primeiro(a) a decifrar as 20 etapas vai ganhar alguma coisa (talvez) <br> • Decifre sozinho ou com amigos <br> • Tudo pode ser usado para decifrar as etapas (livros, google e etc) <br> • Boa sorte"
+                crel.innerHTML = "• Este é um enigma de 20 etapas criado só pelo meme. <br>• Nada precisará ser instalado. <br> • O primeiro(a) a decifrar as 20 etapas vai ganhar alguma coisa (talvez). <br> • Decifre sozinho ou com amigos. <br> • Tudo pode ser usado para decifrar as etapas (livros, google e etc). <br> • Boa sorte. <br><br><br> =>Para avançar entre as fases você precisa fazer alterações no URL de cada etapa <br><br> https://etapa0.github.io/zEnigma/enig.html <br><br> Onde aparece etapa0 você deve trocar pela resposta da etapa, e assim avançará <br><br>Exemplo:<br> Caso você chegue que a resposta é 'Rei Arthur 1' no URL coloque assim:<br><br>https://reiarthur1.github.io/zEnigma/enig.html <br><br> Sempre com letras minúsculas e sem espaçamento"
                 div.appendChild(crel)
+                div.appendChild(text)
+                text.classList = "text"
+                text.innerHTML = "Para avançar para a Etapa 1, use a resposta: Etapa 1"
                 num++
             }
             else{
                 crel.remove()
+                text.remove()
                 num--
             }    
         }
